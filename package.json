@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +13,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "22.13.9",
+    "@types/pg": "8.11.11",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "eslint": "8.57.0",
@@ -26,8 +29,15 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@fastify/jwt": "9.0.4",
+    "@types/bcryptjs": "2.4.6",
+    "bcryptjs": "3.0.2",
+    "D": "1.0.0",
     "dotenv": "16.4.7",
     "fastify": "5.2.1",
+    "pg": "8.13.3",
+    "reflect-metadata": "0.2.2",
+    "typeorm": "0.3.21",
     "zod": "3.24.2"
   }
 }
